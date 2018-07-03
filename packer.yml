@@ -1,0 +1,24 @@
+{
+    "builders": [
+        {
+          "type": "amazon-ebs",
+          "region": "ap-southeast-2",
+          "source_ami": "ami-39f8215b",
+          "instance_type": "t2.micro",
+          "ssh_username": "ec2-user",
+          "ami_name": "Hello Terra {{timestamp}}",
+          "vpc_id": "vpc-990d76fc"
+        }
+    ],
+    "provisioners": [
+        {
+          "destination": "/var/tmp/content/",
+          "source": "content",
+          "type": "file"
+        },
+        {
+            "type": "shell",
+            "script": "install.sh"
+        }
+    ]
+}
