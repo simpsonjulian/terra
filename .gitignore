@@ -1,2 +1,5 @@
 ami
+world
 *.swp 
+terraform.tfstate*
+.terraform

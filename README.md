@@ -8,3 +8,4 @@ A simple project to:
 * build some infrastructure with Terraform, including the AMI
 
 * verify that the content in the AMI is visible.
+
